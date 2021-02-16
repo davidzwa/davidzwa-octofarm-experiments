@@ -1,11 +1,11 @@
 import { NestFactory } from "@nestjs/core";
-import { AppModule } from "./app.module";
 import { AddSwagger } from "./host/extensions/host.extensions";
+import { AppModule } from "./app.module";
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  AddSwagger(app);
-  await app.listen(3000);
+    const app = await NestFactory.create(AppModule);
+    AddSwagger(app);
+    await app.listen(3000);
 }
 
 bootstrap();

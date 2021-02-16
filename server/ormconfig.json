@@ -1,0 +1,22 @@
+{
+  "type": "mongodb",
+  "synchronize": true,
+  "driverExtra": {
+    "authSource": "admin"
+  },
+  "logging": false,
+  "entities": [
+    "dist/**/*.entity{.ts,.js}"
+  ],
+  "subscribers": [
+    "dist/**/*.subscriber{.ts,.js}"
+  ],
+  "migrations": [
+    "dist/**/*.migration{.ts,.js}"
+  ],
+  "cli": {
+    "entitiesDir": "src/entity",
+    "migrationsDir": "src/migration",
+    "subscribersDir": "src/subscriber"
+  }
+}
