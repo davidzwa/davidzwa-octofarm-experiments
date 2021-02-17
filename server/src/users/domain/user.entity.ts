@@ -1,6 +1,5 @@
-import { Entity, Column, ObjectIdColumn, ObjectID, Unique } from "typeorm";
-
-const nameof = <T>(name: keyof T): string => name as string;
+import { Column, Entity, ObjectID, ObjectIdColumn, Unique } from "typeorm";
+import { nameof } from "../../utils/property-reflection.util";
 
 @Entity()
 // https://typeorm.io/#/decorator-reference/unique
@@ -13,6 +12,9 @@ export class User {
 
     @Column()
     userName: string;
+
+    @Column()
+    passwordHash: string;
 
     @Column()
     firstName: string;

@@ -24,7 +24,7 @@ async function bootstrap() {
     printPreBootMessage(logger);
 
     const app = await NestFactory.create(AppModule, {
-        logger: ["error", "warn"]
+        logger: ["error", "warn", "log"]
     });
     AddSwagger(app);
     await app.listen(3000, "127.0.0.1", () => {
